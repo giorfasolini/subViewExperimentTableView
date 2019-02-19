@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SubviewInTableViewExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otN-OQ-imZ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="300" id="k44-Zy-zrV" customClass="CellTableViewCell" customModule="SubviewInTableViewExperiment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k44-Zy-zrV" id="bMl-w3-JeK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lemari" translatesAutoresizingMaskIntoConstraints="NO" id="WF1-do-wk0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.66666666666669"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WF1-do-wk0" firstAttribute="leading" secondItem="bMl-w3-JeK" secondAttribute="leading" id="Hxl-zU-uGG"/>
+                                                <constraint firstAttribute="bottom" secondItem="WF1-do-wk0" secondAttribute="bottom" id="NYh-p5-SVQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="WF1-do-wk0" secondAttribute="trailing" id="Q8m-hK-vex"/>
+                                                <constraint firstItem="WF1-do-wk0" firstAttribute="top" secondItem="bMl-w3-JeK" secondAttribute="top" id="vDP-KJ-dLf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dummyImageView" destination="WF1-do-wk0" id="ZNU-Ar-Owi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fbL-Ez-UPi"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ent-rZ-39s"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="otN-OQ-imZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="10x-RH-gOs"/>
+                            <constraint firstItem="otN-OQ-imZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EK2-65-6d5"/>
+                            <constraint firstAttribute="bottom" secondItem="otN-OQ-imZ" secondAttribute="bottom" id="MIZ-M9-8vT"/>
+                            <constraint firstItem="otN-OQ-imZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WuZ-Cc-Qrx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dummyTableView" destination="otN-OQ-imZ" id="6Na-P4-0Nu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lemari" width="384" height="383"/>
+    </resources>
+</document>
