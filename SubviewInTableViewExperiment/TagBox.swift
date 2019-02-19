@@ -22,8 +22,9 @@ class TagBox: UIView {
 
     }
     
-    required init?(coder aDecoder: NSCodegit push -u origin masterr) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
 }
